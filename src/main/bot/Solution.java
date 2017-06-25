@@ -24,7 +24,7 @@ public class Solution {
         TransportClient transportClient = HttpTransportClient.getInstance();
         VkApiClient vk = new VkApiClient(transportClient);
 
-        FileInputStream fileInputStream = new FileInputStream(new File("src/main/src/resources/config.properties"));
+        FileInputStream fileInputStream = new FileInputStream(new File("src/main/resources/config.properties"));
         Properties properties = new Properties();
         properties.load(fileInputStream);
 
