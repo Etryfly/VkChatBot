@@ -1,1 +1,1 @@
-web: java target/classes/main/bot/Solution.class
+web: java ./target/classes/main/bot/Solution.class
