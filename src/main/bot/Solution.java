@@ -1,4 +1,4 @@
-package bot;
+package main.bot;
 
 import com.vk.api.sdk.client.TransportClient;
 import com.vk.api.sdk.client.VkApiClient;
@@ -39,7 +39,7 @@ public class Solution {
                     int messageId = message.getId();
                     //System.out.println(vk.messages().markAsRead(actor).messageIds(messageId).execute());
                     System.out.println(vk.messages().send(actor).
-                            userId(userId).message("Вас приветствует Megumin bot. To be continued").execute());
+                            userId(userId).message("I am Megumin bot. To be continued").execute());
                 }
             }
         }
