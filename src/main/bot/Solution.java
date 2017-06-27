@@ -39,7 +39,7 @@ public class Solution {
                     int messageId = message.getId();
                     //System.out.println(vk.messages().markAsRead(actor).messageIds(messageId).execute());
                     System.out.println(vk.messages().send(actor).
-                            userId(userId).message("I am Megumin bot. To be continued").execute());
+                            userId(userId).message("Привет! Я Мегумин!").execute());
                 }
             }
         }
