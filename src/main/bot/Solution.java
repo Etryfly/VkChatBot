@@ -21,6 +21,8 @@ import java.util.Properties;
 public class Solution {
 
     public static void main(String[] args) throws Exception {
+        ChatBot chatBot = new ChatBot();
+
         TransportClient transportClient = HttpTransportClient.getInstance();
         VkApiClient vk = new VkApiClient(transportClient);
 
@@ -36,10 +38,9 @@ public class Solution {
             for (Message message : messageList) {
                 if (!message.isReadState()) {
                     int userId = message.getUserId();
-                    int messageId = message.getId();
-                    //System.out.println(vk.messages().markAsRead(actor).messageIds(messageId).execute());
+                    System.out.println(message.getBody());
                     System.out.println(vk.messages().send(actor).
-                            userId(userId).message("Привет! Я Мегумин!").execute());
+                            userId(userId).message(chatBot.sayInReturn(message.getBody())).execute());
                 }
             }
         }
